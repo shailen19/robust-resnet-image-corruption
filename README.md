@@ -6,10 +6,10 @@ datasets to measure performance under different image corruption conditions. Con
 evaluate the model's certainity in its predictions. 
 
 ## Structure
-- **`robust_resnet_image_corruption.ipynb'** - main notebook. Includes training and evaluation. Calls **'load_data.py'**  to grab its datasets for the ML training and evaluation pipeline.
+- **'robust_resnet_image_corruption.ipynb'** - main notebook. Includes training and evaluation. Calls **'load_data.py'**  to grab its datasets for the ML training and evaluation pipeline.
 - **'load_data.py'** - Loads the STL-10 dataset and generates four test and four training datasets: clean and corrupted (noisy, blur, and darkened) for both training and testing sets. Calls **'filters.py'** and **`corruptor.py'** to achieve this.
 - **'filters.py'** - Image corruption filter. Applied gaussian blur, noise, and darkening to an image when called.
-- **`corruptor.py`** - Applied the corruption pipeline to the dataset. Calls the **darken, gausblur, gausnoise** functions from **'filters.py'** to achieve this.
+- **'corruptor.py'** - Applied the corruption pipeline to the dataset. Calls the **darken, gausblur, gausnoise** functions from **'filters.py'** to achieve this.
 
 ## Dataset
 The project use the STL-10 dataset via TensorFlow Datasets.
