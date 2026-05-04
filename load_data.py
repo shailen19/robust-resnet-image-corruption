@@ -11,13 +11,6 @@ import matplotlib.pyplot as plt
 import torch
 from torch.utils.data import TensorDataset, DataLoader
 
-"""My directory is for the path to the STL-10 data set which is used to train the model.
-The path my_directory is currently set to None but MUST BE SET TO THE PATH OF THE 
-STL-10 DATA to successfully run."""
-
-
-my_directory = None
-
 
 def display_images(x,y,x_darken,x_blur,x_noise):
 
@@ -95,9 +88,7 @@ def load_dataset():
     train_ds, test_ds = tfds.load(
     name = "stl10",
     split = ['train','test'],
-    as_supervised=True,
-    data_dir = my_directory
-    )
+    as_supervised=True)
 
     x_train, y_train = load_train(train_ds)
     x_test, y_test = load_test(test_ds)
